@@ -1,0 +1,68 @@
+h2{
+	text-align: center;
+	font-size: 2.5em;
+	margin: 2%
+}
+
+.wrapper{
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+  height: 240px;
+  background-color: purple;
+}
+
+.container { 
+  margin-right: 40px;
+  width: 150px;
+  height: 200px;
+  position: relative;
+  float: left;
+  perspective: 800px;
+}
+
+#card, #card_two, #card_three, #card_four,
+#card_five, #card_six, #card_seven, #card_eight,
+#card_nine, #card_ten, #card_eleven, #card_twelve{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+
+#card figure, #card_two figure,
+#card_three figure, #card_four figure,
+#card_five figure, #card_six figure,
+#card_seven figure, #card_eight figure,
+#card_nine figure, #card_ten figure, 
+#card_eleven figure, #card_twelve figure{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#card .front, #card_two .front, #card_three .front,
+#card_four .front, #card_five .front, #card_six .front, 
+#card_seven .front, #card_eight .front, #card_nine .front, 
+#card_ten .front, #card_eleven .front, #card_twelve .front{
+  background: red;
+}
+
+#card .back, #card_two .back, #card_three .back,
+#card_four .back, #card_five .back, #card_six .back, 
+#card_seven .back, #card_eight .back, #card_nine .back, 
+#card_ten .back, #card_eleven .back, #card_twelve .back {
+  background: blue;
+  transform: rotateY( 180deg );
+}
+
+#card.flipped, #card_two.flipped, #card_three.flipped,
+#card_four.flipped, #card_five.flipped, #card_six.flipped, 
+#card_seven.flipped, #card_eight.flipped, #card_nine.flipped, 
+#card_ten.flipped, #card_eleven.flipped, #card_twelve.flipped {
+  transform: translateX( 54% ) rotateY( -180deg );
+}
